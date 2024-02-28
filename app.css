@@ -1,0 +1,64 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container
+{
+    height: 50vh;
+    width: 45vw;
+    background-color : #f4e4ba;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+.title
+{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.timer_block
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    justify-content: space-evenly;
+}
+
+.timer_block span
+{
+    font-size:2rem;
+}
+
+.timer_block sub
+{
+    font-size: 0.7rem;
+}
+
+.buttons
+{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.buttons button
+{
+    padding: 5px;
+    width: 4rem;
+}
+
+
+
