@@ -44,26 +44,12 @@ function update()
     if(timer  === true)
     {
         microsec++;
-        console.log(microsec);
 
         if(microsec === 100)
         {
-            sec++;
+            second_fn();
             microsec = 0;
         }
-
-        if(sec === 60)
-        {
-            min++;
-            sec = 0;
-        }
-
-        if(min === 60)
-        {
-            hr++;
-            min = 0;
-        }
-
 
         //set value with 0
         if(micro_sec < 10)
@@ -75,36 +61,70 @@ function update()
             micro_sec.innerText = microsec;
         }
 
-        if(sec < 10)
-        {
-            second.innerText = "0"+sec;
-        }
-        else
-        {
-            second.innerText = sec;
-        }
-
-        if(min < 10)
-        {
-            minute.innerText = "0"+min
-        }
-        else
-        {
-            minute.innerText = min;
-        }
-
-        if(hr < 10)
-        {
-            hour.innerText = "0"+hr;
-        }
-        else
-        {
-            hour.innerText = hr;
-        }
-
         //timeout
-        setTimeout(update,10);
+        setTimeout(update,8);
     }
+}
+
+
+//function for second
+function second_fn()
+{
+    sec++;
+
+    if(sec === 60)
+    {
+        minute_fn();
+        sec = 0;
+    }
+
+
+    if(sec < 10)
+    {
+        second.innerText = "0"+sec;
+    }
+    else
+    {
+        second.innerText = sec;
+    }
+
+}
+
+function minute_fn()
+{
+    min++;
+
+    if(min === 60)
+    {
+        hours_fn();
+        min = 0;
+    }
+
+    
+    if(min < 10)
+    {
+        minute.innerText = "0"+min
+    }
+    else
+    {
+        minute.innerText = min;
+    }
+}
+
+function hours_fn()
+{
+    hr++;
+
+    
+    if(hr < 10)
+    {
+        hour.innerText = "0"+hr;
+    }
+    else
+    {
+        hour.innerText = hr;
+    }
+
 }
 
 
